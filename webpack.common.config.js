@@ -9,6 +9,7 @@ module.exports = {
   cache: true,
   entry: {
     app: "./src/app.js",
+    main: "./src/main.ts",
     vendor: "./src/vendor.js",
   },
   output: {
@@ -23,8 +24,16 @@ module.exports = {
     modules: true,
     reasons: true
   },
+  resolve: {
+    // Add '.ts' and '.tsx' as a resolvable extension.
+    extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
+    alias: {
+      "@angular/upgrade/static": "@angular/upgrade/bundles/upgrade-static.umd.js"
+    }
+  },
   module: {
     loaders: [
+      { test: /\.tsx?$/, loader: ['babel-loader', 'ts-loader'] },
       {
         test: /\.js?$/,
         loader: 'babel-loader',
