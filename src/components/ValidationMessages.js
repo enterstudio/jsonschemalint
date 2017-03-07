@@ -1,5 +1,3 @@
-var templateUrl = require('ngtemplate-loader!html-loader!./validation-messages.html')
-
 //TODO: split this into two separate validation messages and validation errors component
 
 function ValidationMessagesController() {
@@ -15,7 +13,8 @@ function ValidationMessagesController() {
 }
 
 angular.module('app').component('validationMessages', {
-  templateUrl: templateUrl,
+  restrict: 'E',
+  templateUrl: require('ngtemplate-loader!html-loader!./validation-messages.html'),
   controller: ValidationMessagesController,
   bindings: {
     messages: '='

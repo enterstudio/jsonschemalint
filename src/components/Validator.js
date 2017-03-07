@@ -1,5 +1,3 @@
-var templateUrl = require('ngtemplate-loader!html-loader!./validator.html')
-
 function ValidatorController($scope, $element, $attrs, $log, $q) {
 
   var self = this;
@@ -106,7 +104,8 @@ function ValidatorController($scope, $element, $attrs, $log, $q) {
 }
 
 angular.module('app').component('validator', {
-  templateUrl: templateUrl,
+  restrict: 'E',
+  templateUrl: require('ngtemplate-loader!html-loader!./validator.html'),
   controller: ValidatorController,
   bindings: {
     'identifier': '@',
