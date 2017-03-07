@@ -104,9 +104,12 @@ function ValidatorController($scope, $element, $attrs, $log, $q) {
 }
 
 angular.module('app').component('validator', {
-  restrict: 'E',
   templateUrl: require('ngtemplate-loader!html-loader!./validator.html'),
   controller: ValidatorController,
+  controllerAs: "$ctrl",
+  restrict: 'E',
+  bindToController: {},
+  scope: {},
   bindings: {
     'identifier': '@',
     'title': '@',
