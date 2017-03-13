@@ -256,7 +256,7 @@ function ValidatorViewController($scope, $rootScope, $log, $http, $window, $q, $
 angular.module('app').component('validatorView', {
   templateUrl: require('ngtemplate-loader!html-loader!./validator-view.html'),
   controller: ValidatorViewController,
-  controllerAs: "$ctrl",
+  controllerAs: '$ctrl',
   restrict: 'E',
   bindToController: {},
   scope: {}

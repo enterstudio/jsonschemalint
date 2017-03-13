@@ -15,7 +15,7 @@ function ValidationMessagesController() {
 angular.module('app').component('validationMessages', {
   templateUrl: require('ngtemplate-loader!html-loader!./validation-messages.html'),
   controller: ValidationMessagesController,
-  controllerAs: "$ctrl",
+  controllerAs: '$ctrl',
   restrict: 'E',
   bindToController: {},
   scope: {},
